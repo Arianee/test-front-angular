@@ -1,0 +1,173 @@
+<header>
+  <div class="left">
+    <h1>Test Angular</h1>
+    <ul class="logos">
+      <li><img src="assets/imgs/ng.png" width="40"></li>
+      <li><img src="assets/imgs/ts.png" width="30"></li>
+      <li><img src="assets/imgs/js.png" width="30"></li>
+    </ul>
+    <p>
+      L'objectif de cette excercice est de vous accompagner pour
+      avoir une appréciation de votre maîtrise du Framework Angular, de typescript/javascript,
+      CSS/SCSS et votre capacité a assimiler les besoins fonctionelles...
+    </p>
+    <p>
+      Veuillez lancer l'API de test <span class="code">npm run start:api</span><br>
+      Vous devriez voir le message "Hello .arianee" sur <span class="code">http://localhost:3000</span>
+    </p>
+    <p>
+      Vous pouvez piocher de la liste des tâches a votre convenance, pas d'ordre et aucune obligation a tout finir,
+      bien sûr vous êtes autorisé a utiliser internet pour rechercher n'importe quelle informations : )
+    </p>
+  </div>
+
+  <div class="right">
+    <mat-card class="card">
+      <mat-card-title-group>
+        <mat-card-title>Liens utiles</mat-card-title>
+      </mat-card-title-group>
+      <mat-card-content>
+        <a class="card-link" href="https://angular.io/docs" target="_blank">Angular</a>
+        <a class="card-link" href="https://material.angular.io/components/categories" target="_blank">Angular
+          Material</a>
+        <a class="card-link" href="https://material.io/develop/web/supporting/layout-grid" target="_blank">Grid</a>
+        <a class="card-link" href="https://lodash.com/docs/4.17.15" target="_blank">Lodash</a>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</header>
+
+<div class="mdc-layout-grid">
+
+  <div class="mdc-layout-grid__inner">
+
+    <div class="mdc-layout-grid__cell--span-4">
+
+      <mat-card class="card">
+        <mat-card-title-group>
+          <mat-card-title>Liste des tâches</mat-card-title>
+        </mat-card-title-group>
+        <mat-card-content>
+
+          <mat-selection-list class="to-do-list">
+            <mat-list-option>
+              Boutique vide...
+              <span class="description">
+                dans la page "boutique" il faut afficher la liste des produits (livres) disponible à la vente,
+                il faut utiliser le service "livreService" et l'api
+                <span class="code">[GET] http://localhost:3000/books</span>
+              </span>
+            </mat-list-option>
+
+            <mat-list-option>
+              Zéro pointé...
+              <span class="description">
+                Dans la page "boutique" y a un compteur qui bouge pas qui doit afficher le nombre de livre trouvés
+                et sur l'icone panier dans le "header" aussi. Faîtes le néceassaire pour les rendre dynamique et afficher la bonne information.
+              </span>
+            </mat-list-option>
+
+            <mat-list-option>
+              Beaucoup trop...
+              <span class="description">
+                Dans la page "boutique" dans les elements disponibles à la vente, il y a un peu trop d'informations.
+                il faut créer un pipe qui affiche les 25 premiers caractères de la description avec 3 petits points à la fin...
+              </span>
+            </mat-list-option>
+
+            <mat-list-option>
+              Passage bloqué !
+              <span class="description">
+                utliser un router guard pour refuser l'acces au panier s'il est vide
+              </span>
+            </mat-list-option>
+          </mat-selection-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="mdc-layout-grid__cell--span-4">
+
+      <mat-card class="card">
+        <mat-card-content>
+          <mat-selection-list class="to-do-list">
+            <mat-list-option>
+              Rechercher l'élu...
+              <span class="description">
+                Si je veux rechercher un livre (Boutique) par titre comment faire ?
+              </span>
+            </mat-list-option>
+
+            <mat-list-option>
+              Plus de précision !
+              <span class="description">
+                je veux filter la liste des produits (Boutique) par catégorie. le filtre doit être cumulable avec d'autres filtres.
+              </span>
+            </mat-list-option>
+
+            <mat-list-option>
+              Un petit Lifting !
+              <span class="description">
+                Le style du total panier <span class="code">TotalPanierComponent</span> est cassé, je veux le voir briller comme jamais...
+                <a (click)="$event.stopPropagation()" href="/assets/imgs/exemple-1.png" target="_blank">voici a quoi il doit ressembler</a>
+              </span>
+            </mat-list-option>
+
+            <mat-list-option>
+              Le jour J !
+              <span class="description">
+                La Modal du détail produit <span class="code">DetailsLivreDialogComponent</span>
+                affiche une date de sortie mal formatée.
+                utilise un pipe pour un rendu <span class="code mini">01/01/2001</span>
+              </span>
+            </mat-list-option>
+          </mat-selection-list>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="mdc-layout-grid__cell--span-4">
+      <mat-card class="card">
+        <mat-card-content>
+          <mat-selection-list class="to-do-list">
+            <mat-list-option>
+              ...double chagrin !
+              <span class="description">
+                L'ajout des produits dans le panier n'est pas optimal, j'aimerais éléminer les doublons donc lorsque un produit existe déjà
+                au lieux de le rajouter, il faut augmenter sa quantité (sache que ISBN est unique).
+              </span>
+            </mat-list-option>
+
+            <mat-list-option>
+              Remplir les espaces !
+              <span class="description">
+                Dans <span class="code">ResumePanierComponent</span> il y a un compteur de quantité qui est supposé
+                manipuler la quantité du produit a acheter, mais les methodes sont vident,
+                par conséquent rien ne se passe si on clique dessus ! (faîtes attention il y a une quantité limité pour chaque produit)
+              </span>
+            </mat-list-option>
+
+            <mat-list-option>
+              A la poubelle...
+              <span class="description">
+                Je veux pouvoir éléminer des élements de mon panier, ne m'oblige pas a tout payer !
+              </span>
+            </mat-list-option>
+
+            <mat-list-option>
+              Baguette magique !
+              <span class="description">
+                Je veux une directive qui applique un <span class="code">border-radius</span> à n'importe quel element du DOM,
+                il faut l'appliquer sur les produits de la boutique, je n'aime pas les design carré :(
+              </span>
+            </mat-list-option>
+          </mat-selection-list>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>
+
+</div>

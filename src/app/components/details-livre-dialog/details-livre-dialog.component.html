@@ -1,0 +1,38 @@
+<mat-dialog-content>
+
+  <div class="book-detail--wrapper">
+
+    <img class="mat-elevation-z4" [src]="data.cover" width="300">
+
+    <div class="book-detail">
+      <span class="title">{{data.title}} <span class="id">{{data.isbn}}</span></span>
+      <span class="author">by {{data.author}}</span>
+      <p class="about">{{data.about}}</p>
+
+      <table>
+        <tr>
+          <td>Prix</td>
+          <td>{{data.price}} euros</td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>{{data.type}}</td>
+        </tr>
+        <tr>
+          <td>Date de sortie</td>
+          <td>{{data.registered}}</td>
+        </tr>
+        <tr>
+          <td>Quantité</td>
+          <td>{{data.quantity}}</td>
+        </tr>
+      </table>
+
+      <div class="divider"></div>
+
+      <button mat-flat-button color="primary" (click)="ajouterAuPanier()">Ajouter au panier</button>
+    </div>
+
+  </div>
+
+</mat-dialog-content>

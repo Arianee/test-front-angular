@@ -1,0 +1,17 @@
+
+<div class="total-panier-wrapper">
+
+  <div class="element-panier-wrapper">
+    <ul class="element-panier" *ngFor="let item of panier">
+      <li class="label">{{item.livre.title}} ({{item.livre.isbn}})</li>
+      <li class="separator"></li>
+      <li class="price">{{item.livre.price * item.quantite}} €</li>
+    </ul>
+  </div>
+
+  <ul class="total">
+    <li class="label">Total</li>
+    <li class="price">{{totalPanier}} euros</li>
+  </ul>
+
+</div>

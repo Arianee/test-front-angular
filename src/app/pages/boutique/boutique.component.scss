@@ -1,0 +1,17 @@
+.filters-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  .categories-form {
+    padding-bottom: 1.34375em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

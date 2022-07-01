@@ -1,0 +1,42 @@
+<div class="mdc-layout-grid">
+
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--align-middle">
+      <h1>0 Produits disponible</h1>
+    </div>
+    <div class="mdc-layout-grid__cell--span-8 mdc-layout-grid--align-right filters-wrapper">
+      <!-- Categories -->
+      <form class="categories-form" [formGroup]="categories">
+        <mat-checkbox formControlName="adventure">Adventure</mat-checkbox>
+        <mat-checkbox formControlName="action">Action</mat-checkbox>
+        <mat-checkbox formControlName="comedy">Comedy</mat-checkbox>
+        <mat-checkbox formControlName="horror">Horror</mat-checkbox>
+        <mat-checkbox formControlName="thriller">Thriller</mat-checkbox>
+      </form>
+      <!-- Search -->
+      <mat-form-field appearance="outline">
+        <mat-label>Recherche</mat-label>
+        <input matInput type="text" [(ngModel)]="searchValue">
+        <mat-icon matPrefix>search</mat-icon>
+        <button mat-icon-button matSuffix (click)="searchValue = ''">
+          <mat-icon matPrefix>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-12">
+
+      <div class="items-wrapper">
+        <app-element-boutique
+          *ngFor="let livre of livres"
+          [livre]="livre"
+        ></app-element-boutique>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+

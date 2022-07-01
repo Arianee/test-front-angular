@@ -1,0 +1,21 @@
+
+<div class="resume-panier-wrapper">
+
+  <ul class="resume-panier mat-elevation-z2" *ngFor="let item of panier">
+    <li class="cover" [style.background-image]="'url(' + item.livre.cover + ')'"></li>
+    <li class="info">
+      <span class="title">{{item.livre.title}} ({{item.livre.isbn}})</span>
+      <span class="author">by {{item.livre.author}}</span>
+      <span class="price">Prix: {{item.livre.price}} euros</span>
+      <span>
+        <button mat-icon-button (click)="panierService.augmenteQuantite()"><mat-icon>remove</mat-icon></button>
+        <span class="quantity">{{item.quantite}}</span>
+        <button mat-icon-button (click)="panierService.reduirQuantite()"><mat-icon>add</mat-icon></button>
+      </span>
+    </li>
+    <li class="action">
+      <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
+    </li>
+  </ul>
+
+</div>

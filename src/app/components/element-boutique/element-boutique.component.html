@@ -1,0 +1,17 @@
+
+<ul
+  class="store-item"
+  *ngIf="livre"
+  [style.background-image]="'url(' + livre.cover + ')'"
+>
+  <li class="overlay"></li>
+  <li class="tag">{{livre.type}}</li>
+  <li class="title">{{livre.title}}</li>
+  <li class="about">{{livre.about}}</li>
+  <li class="price">{{livre.price}}€</li>
+
+  <li class="footer">
+    <button mat-flat-button (click)="afficherDetails()">Détails</button>
+    <button mat-flat-button color="primary" (click)="ajouterAuPanier()">Ajouter</button>
+  </li>
+</ul>

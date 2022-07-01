@@ -1,0 +1,31 @@
+@use "@material/layout-grid/mdc-layout-grid";
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fafafa;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.to-do-list {
+  mat-list-option.mat-list-option {
+    height: auto;
+
+    div.mat-list-item-content.mat-list-item-content-reverse {
+      font-weight: 500;
+      padding: 16px !important;
+    }
+
+    .description {
+      font-size: .8em;
+      line-height: 160%;
+    }
+  }
+}

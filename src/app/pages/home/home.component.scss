@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  .left {
+    flex: 1;
+  }
+  .right {
+    width: 22%;
+  }
+  .left, .right {
+    padding: 20px;
+  }
+  h1 {
+    display: inline-flex;
+    font-size: 4em;
+    line-height: 110%;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  .logos {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 160%;
+    max-width: 800px;
+  }
+}
+
+.code {
+  background: #faebd7;
+  color: #a52a2a;
+  font-size: .8em;
+  padding: 0.4em;
+  border-radius: 4px;
+}
+
+a.card-link {
+  display: flex;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
+}
